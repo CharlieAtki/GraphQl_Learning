@@ -1,0 +1,56 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    networks:
+      - app-network
+
+  graphql-server:
+    build:
+      context: ./graphql-server
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+      - backend
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/graphql-database
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/backend-database
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+    volumes:
+      - mongodb-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=graphql-database
+
+volumes:
+  mongodb-data:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
