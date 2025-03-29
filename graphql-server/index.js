@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 // Step 1: Set up MongoDB connection
-const mongoUri = process.env.MONGODB_URI || 'mongodb://mongodb:27017/graphql-database';
+const mongoUri = process.env.MONGODB_URI || 'mongodb://mongodb:27017/backend-database';
 
 mongoose.connect(mongoUri)
 .then(() => {
