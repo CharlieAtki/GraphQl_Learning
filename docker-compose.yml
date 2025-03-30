@@ -21,7 +21,7 @@ services:
       - mongodb
       - backend
     environment:
-      - MONGODB_URI=mongodb://mongodb:27017/graphql-database
+      - MONGODB_URI=mongodb://mongodb:27017/backend-database
 
   backend:
     build:
