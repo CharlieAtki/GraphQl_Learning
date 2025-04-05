@@ -5,14 +5,18 @@ import mongoose from 'mongoose';
 // Import schema and resolvers
 import { typeDefs } from './schema/schema.js';
 import { userResolvers } from './resolvers/userResolvers.js';
+import { postResolvers } from './resolvers/postResolvers.js';
 
 // Combine all resolvers
+// The resolvers are functions that define the actual behavior of the operations defined in the schema.
+// They are responsible for fetching, manipulating, or returning data when a query or mutation is made.
 const resolvers = {
     Query: {
-        ...userResolvers.Query,
+        ...userResolvers.Query, // All Query resolvers from userResolvers
+        ...postResolvers.Query, // All Query resolvers from postResolvers
     },
     Mutation: {
-        ...userResolvers.Mutation,
+        ...userResolvers.Mutation, // All Mutation resolvers from userResolvers
     },
 };
 

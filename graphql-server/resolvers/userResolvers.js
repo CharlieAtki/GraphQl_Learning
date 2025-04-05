@@ -16,6 +16,7 @@ export const userResolvers = {
     Mutation: {
         createUser: async (_, { email, password }) => {
             // Still hashing the password for security
+            // 10 = salt?
             const hashedPassword = await bcrypt.hash(password, 10);
             
             const newUser = new User({

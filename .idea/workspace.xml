@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cbe0175-d1ec-4962-a83a-2472c8ca7674" name="Changes" comment="Apollo Server (GraphQL) Implementation &#10;&#10;I have fixed the sever config as previously, the docker container was connected to the wrong database. I have adjusted the docker-compose.yml file to fix this. &#10;&#10;To create the schema, resolvers and index file, I used chatGPT, but i am now going to go through it and learn how the program works.">
-      <change afterPath="$PROJECT_DIR$/graphql-server/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphql-server/resolvers/userResolvers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphql-server/schema/schema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/postController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/postRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphql-server/models/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphql-server/resolvers/postResolvers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/835e8aa9-11c3-479e-8f5e-c597bb36368c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/835e8aa9-11c3-479e-8f5e-c597bb36368c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphql-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-server/node_modules/mongoose/lib/helpers/populate/assignRawDocsToIdStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/node_modules/mongoose/lib/helpers/populate/assignRawDocsToIdStructure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-server/node_modules/mongoose/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/node_modules/mongoose/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-server/node_modules/mongoose/types/schematypes.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/node_modules/mongoose/types/schematypes.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-server/resolvers/userResolvers.js" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/resolvers/userResolvers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-server/schema/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-server/schema/schema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +136,14 @@
       <workItem from="1743269132412" duration="1102000" />
       <workItem from="1743278702465" duration="2754000" />
       <workItem from="1743317372418" duration="732000" />
-      <workItem from="1743318113469" duration="3842000" />
+      <workItem from="1743318113469" duration="4060000" />
+      <workItem from="1743322415097" duration="2785000" />
+      <workItem from="1743496540134" duration="54000" />
+      <workItem from="1743497511223" duration="63000" />
+      <workItem from="1743497629544" duration="7000" />
+      <workItem from="1743497643550" duration="2000" />
+      <workItem from="1743497650521" duration="2000" />
+      <workItem from="1743878246344" duration="1670000" />
     </task>
     <task id="LOCAL-00001" summary="Readme file">
       <option name="closed" value="true" />
@@ -164,7 +169,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743278737516</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Apollo Server (GraphQL) Implementation &#10;&#10;I have fixed the sever config as previously, the docker container was connected to the wrong database. I have adjusted the docker-compose.yml file to fix this. &#10;&#10;To create the schema, resolvers and index file, I used chatGPT, but i am now going to go through it and learn how the program works.">
+      <option name="closed" value="true" />
+      <created>1743322091762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743322091762</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Apollo Server (GraphQL) Implementation &#10;&#10;I have fixed the sever config as previously, the docker container was connected to the wrong database. I have adjusted the docker-compose.yml file to fix this. &#10;&#10;To create the schema, resolvers and index file, I used chatGPT, but i am now going to go through it and learn how the program works.">
+      <option name="closed" value="true" />
+      <created>1743322099840</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743322099840</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
