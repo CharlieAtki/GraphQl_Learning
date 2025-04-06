@@ -14,8 +14,10 @@ export const typeDefs = `#graphql
         author: String
         content: String
         reviews: [Int!]!
+        createdAt: String
+        updatedAt: String
     }
-    
+
     # Defining how the data should be fetched
     type Query {
         # User queries
@@ -26,12 +28,16 @@ export const typeDefs = `#graphql
         # Post queries 
         posts: [Post!]! 
     }
-    
+
     # These are defining the "methods" -> actions on the data 
     type Mutation {
+        # User Mutations
         createUser(email: String!, password: String!): User!
         updateUser(id: ID!, email: String): User
         deleteUser(id: ID!): Boolean!
+        
+        # Post mutations
+        createPost(title: String!, author: String!, content: String!): Post!
     }
 `;
 

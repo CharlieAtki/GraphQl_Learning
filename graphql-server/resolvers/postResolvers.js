@@ -6,6 +6,18 @@ export const postResolvers = {
         posts: async () => {
             return await Post.find({});
         }
+    },
+    Mutation: {
+        createPost: async (_, { title, author, content }) => {
+            const newPost = new Post({
+                title,
+                author,
+                content
+            });
+
+            await newPost.save();
+            return newPost;
+        },
     }
 };
 
