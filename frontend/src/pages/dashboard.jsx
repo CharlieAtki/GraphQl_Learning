@@ -32,7 +32,7 @@ import {
 
 const Dashboard = () => {
     const [users, setUsers] = useState([]); // manages the users from the database
-    const [info, setInfo] = useState([]); //  manages the fetched GraphQL data
+    const [info, setInfo] = useState(null); //  manages the fetched GraphQL data
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -116,8 +116,8 @@ const Dashboard = () => {
             {/* Ordered list for the posts and users fetched via GraphQL + Data formatting via .map method  */}
             <div className="p-6">
                 <h1 className="text-xl font-semibold text-indigo-800">GraphQL Request</h1>
-
-                {info.posts && (
+                <h2 className="text-lg font-medium mt-4 mb-2">Data:</h2>
+                {info && info.posts && (
                     <>
                         <h2 className="text-lg font-medium mt-4 mb-2">Posts:</h2>
                         <ul>
@@ -131,7 +131,7 @@ const Dashboard = () => {
                     </>
                 )}
 
-                {info.users && (
+                {info && info.users && (
                     <>
                         <h2 className="text-lg font-medium mt-4 mb-2">Users:</h2>
                         <ul>
